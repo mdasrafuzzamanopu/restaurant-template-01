@@ -148,7 +148,8 @@
                     <a href="#">
                         <div class="instagram-post-container">
                             <div class="instagram-post-header">
-                                <img src="images/Black-art-studio-icon.png" loading="lazy" alt="Profile Picture" class="profile-pic">
+                                <img src="images/Black-art-studio-icon.png" loading="lazy" alt="Profile Picture"
+                                    class="profile-pic">
                                 <div class="username-location">
                                     <div class="username">BlackArt<span style="color: red;">.</span></div>
                                     <div class="location">Dhaka, Bangladesh</div>
@@ -187,7 +188,8 @@
                     <a href="#">
                         <div class="instagram-post-container">
                             <div class="instagram-post-header">
-                                <img src="images/Black-art-studio-icon.png" alt="Profile Picture" loading="lazy" class="profile-pic">
+                                <img src="images/Black-art-studio-icon.png" alt="Profile Picture" loading="lazy"
+                                    class="profile-pic">
                                 <div class="username-location">
                                     <div class="username">BlackArt<span style="color: red;">.</span></div>
                                     <div class="location">Dhaka, Bangladesh</div>
@@ -226,7 +228,8 @@
                     <a href="#">
                         <div class="instagram-post-container">
                             <div class="instagram-post-header">
-                                <img src="images/Black-art-studio-icon.png" alt="Profile Picture" loading="lazy" class="profile-pic">
+                                <img src="images/Black-art-studio-icon.png" alt="Profile Picture" loading="lazy"
+                                    class="profile-pic">
                                 <div class="username-location">
                                     <div class="username">BlackArt<span style="color: red;">.</span></div>
                                     <div class="location">Dhaka, Bangladesh</div>
@@ -286,7 +289,33 @@
 
 
     <!-- recommended menu -->
+    <Section class="onw-kitchen">
+        <div class="onw-kitchen-container">
+            <div class="onw-kitchen-textContainer">
+                <h2>Try this delicious recipe to make your day</h2>
+            </div>
+            <div class="onw-kitchen-imgContainer" style="background: white;">
+                <p style="margin-top: 8%;color: #aca7a1;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam aspernatur quo aut id dolor, repellat commodi, voluptate laudantium iusto fuga neque!
+                    Reprehenderit repudiandae harum voluptatem quidem soluta atque vero!</p>
+            </div>
+        </div>
+    </Section>
+    <div class="recipe-container" id="recommendedMenus">
 
+        <!-- <div class="cart" style="background: white;">
+            <img src="images/food-03.jpg" loading="lazy" />
+            <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
+            <div class="time" style="justify-content: center;">
+                <div class="row">
+                    <p><img src="images/clock.svg" loading="lazy" alt="clock" /> 30 Minutes</p>
+                </div>
+                <div class="row2">
+                    <p><img src="images/ForkKnife.svg" loading="lazy" alt="ForkKnife" /> 20 mins</p>
+                </div>
+            </div>
+        </div>  -->
+    </div>
 
 
     <!-- email Subscribe -->
@@ -395,7 +424,7 @@
             const img = document.createElement('img');
             img.src = '/images/image 25.png';
             img.alt = 'categories-' + (i + 1);
-            img.loading="lazy";
+            img.loading = "lazy";
             const heading = document.createElement('h6');
             heading.textContent = 'Breakfast';
             catCardDiv.appendChild(img);
@@ -406,7 +435,6 @@
 
         // recipe-container  
         const recipeContainer = document.querySelector('.recipe-container');
-
         for (let i = 0; i < 8; i++) {
             const recipeCard = `
                     <div class="cart">
@@ -424,6 +452,30 @@
                 `;
             recipeContainer.innerHTML += recipeCard;
         }
+
+        // recommended menu
+
+        const recommendedMenus = document.getElementById("recommendedMenus");
+        const recipeHTML = `
+            <div class="cart" style="background: white;">
+                <img src="images/food-03.jpg" loading="lazy" />
+                <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
+                <div class="time" style="justify-content: center;">
+                    <div class="row">
+                        <p><img src="images/clock.svg" loading="lazy" alt="clock" /> 30 Minutes</p>
+                    </div>
+                    <div class="row2">
+                        <p><img src="images/ForkKnife.svg" loading="lazy" alt="ForkKnife" /> 20 mins</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        for (let i = 0; i < 8; i++) {
+            recommendedMenus.innerHTML += recipeHTML;
+        }
+
+
+
     </script>
 
 </body>
