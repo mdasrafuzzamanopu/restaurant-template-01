@@ -585,8 +585,14 @@ h2 {
     line-height: 1.5;
 }
 
-.instagram-card a {
-    display: block;
+.instagram-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    justify-content: center;
+    gap: 2em;
+    padding: 2em 0;
+}
+.instagram-card a{
     text-decoration: none;  
 }
 
