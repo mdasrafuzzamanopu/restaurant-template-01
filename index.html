@@ -349,30 +349,31 @@
             }
         
             createSocialIcons() {
-                // Select the first element with the specified class
+                // Select all elements with the specified class
                 const containers = document.getElementsByClassName(this.containerClass);
                 
-                // Check if at least one container is found
+                // Check if any containers are found
                 if (containers.length > 0) {
-                    const container = containers[0]; // Use the first container found
-                    const div = document.createElement('div');
-                    div.className = 'social-icons';
+                    Array.from(containers).forEach(container => {
+                        const div = document.createElement('div');
+                        div.className = 'social-icons';
         
-                    this.socialMediaLinks.forEach(social => {
-                        const a = document.createElement('a');
-                        a.href = social.url;
-                        a.setAttribute('aria-label', social.name);
+                        this.socialMediaLinks.forEach(social => {
+                            const a = document.createElement('a');
+                            a.href = social.url;
+                            a.setAttribute('aria-label', social.name);
         
-                        const img = document.createElement('img');
-                        img.src = social.icon;
-                        img.alt = social.alt;
-                        img.className = 'socialIcon';
+                            const img = document.createElement('img');
+                            img.src = social.icon;
+                            img.alt = social.alt;
+                            img.className = 'socialIcon';
         
-                        a.appendChild(img);
-                        div.appendChild(a);
+                            a.appendChild(img);
+                            div.appendChild(a);
+                        });
+        
+                        container.appendChild(div);
                     });
-        
-                    container.appendChild(div);
                 } else {
                     console.error(`No elements found with class: ${this.containerClass}`);
                 }
