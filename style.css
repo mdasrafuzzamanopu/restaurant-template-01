@@ -5,6 +5,9 @@ body {
     margin-bottom: 8%;
     background-color: white;
 }
+.a{
+    text-decoration: none;
+}
 
 .logo-image {
     height: auto;
@@ -458,7 +461,7 @@ h2 {
 
 .recipe-container .cart {
     position: relative;
-    background: linear-gradient(to bottom, white, rgb(231, 249,253));
+    background: linear-gradient(to bottom, white, rgb(231, 249, 253));
     padding: 1em;
     border-radius: 15px;
 }
@@ -549,7 +552,7 @@ h2 {
     flex: 1;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom, white, rgb(231, 249,253));
+    background: linear-gradient(to bottom, white, rgb(231, 249, 253));
     border-radius: 30px;
 }
 
@@ -560,7 +563,7 @@ h2 {
 }
 
 .instageam-section {
-    background: linear-gradient(to bottom, white, rgb(231, 249,253));
+    background: linear-gradient(to bottom, white, rgb(231, 249, 253));
     padding: 2em 0;
     margin: 2em 0;
     border-radius: 30px;
@@ -594,8 +597,9 @@ h2 {
     gap: 2em;
     padding: 2em 0;
 }
-.instagram-card a{
-    text-decoration: none;  
+
+.instagram-card a {
+    text-decoration: none;
 }
 
 /* instagram-post */
@@ -716,3 +720,33 @@ h2 {
 }
 
 /* instagram-post */
+
+/* instagram-btn */
+
+.instagram-btn {
+    /* existing styles */
+    display: flex;
+    align-items: center;
+    height: 25px;
+    max-width: 250px;
+    padding: 0.5em 1em;
+    font-size: 16px;
+    color: white;
+    background-color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.instagram-btn:hover {
+    color: #ff4c4c;
+}
+
+.instagram-btn:hover .instagram-icon path {
+    fill: #ff4c4c;
+}
+
+.instagram-btn:hover .instagram-icon path,
+.instagram-btn:hover .instagram-icon circle {
+    fill: #ff4c4c;
+}
