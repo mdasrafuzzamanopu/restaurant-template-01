@@ -5,7 +5,8 @@ body {
     margin-bottom: 8%;
     background-color: white;
 }
-.a{
+
+.a {
     text-decoration: none;
 }
 
@@ -531,7 +532,8 @@ h2 {
 
 .onw-kitchen-btnContainer {
     height: 5%;
-    place-content: center display: inline-block;
+    place-content: center;
+    display: inline-block;
     padding: 0.5em 1em;
     background-color: #000000;
     color: white;
