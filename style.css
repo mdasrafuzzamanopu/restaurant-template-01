@@ -458,7 +458,7 @@ h2 {
 
 .recipe-container .cart {
     position: relative;
-    background: linear-gradient(to bottom, white, #f0ffff);
+    background: linear-gradient(to bottom, white, rgb(231, 249,253));
     padding: 1em;
     border-radius: 15px;
 }
@@ -549,7 +549,8 @@ h2 {
     flex: 1;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom, white, #f0ffff);
+    background: linear-gradient(to bottom, white, rgb(231, 249,253));
+    border-radius: 30px;
 }
 
 .onw-kitchen-imgContainer img {
@@ -559,9 +560,10 @@ h2 {
 }
 
 .instageam-section {
-    background: linear-gradient(to bottom, white, #f0ffff);
+    background: linear-gradient(to bottom, white, rgb(231, 249,253));
     padding: 2em 0;
     margin: 2em 0;
+    border-radius: 30px;
 }
 
 .instageam-container {
