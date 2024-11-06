@@ -329,13 +329,13 @@
                 this.socialMediaLinks = [
                     {
                         name: 'Facebook',
-                        url: '#', 
+                        url: '#',
                         icon: '/images/facebook.svg',
                         alt: 'Facebook logo'
                     },
                     {
                         name: 'Twitter',
-                        url: '#', 
+                        url: '#',
                         icon: '/images/twitter.svg',
                         alt: 'Twitter logo'
                     },
@@ -353,31 +353,23 @@
                     }
                 ];
             }
-        
             createSocialIcons() {
-                // Select all elements with the specified class
                 const containers = document.getElementsByClassName(this.containerClass);
-                
-                // Check if any containers are found
                 if (containers.length > 0) {
                     Array.from(containers).forEach(container => {
                         const div = document.createElement('div');
                         div.className = 'social-icons';
-        
                         this.socialMediaLinks.forEach(social => {
                             const a = document.createElement('a');
                             a.href = social.url;
                             a.setAttribute('aria-label', social.name);
-        
                             const img = document.createElement('img');
                             img.src = social.icon;
                             img.alt = social.alt;
                             img.className = 'socialIcon';
-        
                             a.appendChild(img);
                             div.appendChild(a);
                         });
-        
                         container.appendChild(div);
                     });
                 } else {
