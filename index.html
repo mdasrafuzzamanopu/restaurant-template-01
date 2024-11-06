@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackArtStudeo.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="./script.js">
+</head>
+
+<body>
+
+    <!-- html code Start-->
+
+    <header class="header">
+        <a href="/" class="logo">
+            <span class="logoText">BlackArtStudeo</span>
+            <span class="logoDot">.</span>
+        </a>
+        <nav class="navigation">
+            <a href="/" class="navLink">Home</a>
+            <a href="#" class="navLink">Recipes</a>
+            <a href="#" class="navLink">Blog</a>
+            <a href="#" class="navLink">Contact</a>
+            <a href="#" class="navLink">About</a>
+        </nav>
+        <div class="socialMedia">
+            <a href="#" aria-label="Facebook">
+                <img src="/images/facebook.svg" alt="Facebook logo" class="socialIcon" />
+            </a>
+            <a href="#" aria-label="Twitter">
+                <img src="/images/twitter.svg" alt="Twitter logo" class="socialIcon" />
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="/images/instagram.svg" alt="Instagram logo" class="socialIcon" />
+            </a>
+        </div>
+    </header>
+
+    <!-- hero-section -->
+    <div class="hero">
+        <div class="container">
+            <div class="heroContainer">
+                <div class="heroContent">
+                    <div class="recipe">
+                        <img src="./images/hot-pecipes.png" alt="Recipe Icon" />
+                        <span>Hot Recipes</span>
+                    </div>
+                    <h1>Spicy delicious chicken wings</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqut enim ad minim </p>
+                    <div class="time">
+                        <div class="row">
+                            <p><img src="images/clock.svg" />30 Minutes</p>
+                        </div>
+                        <div class="row2">
+                            <p><img src="images/ForkKnife.svg" /> Cook: 20 mins</p>
+                        </div>
+                    </div>
+                    <div class="profileBtn">
+                        <div class="profile">
+                            <div class="pImg">
+                                <img src="images/person.png" alt="Chef Profile" />
+                            </div>
+                            <div class="column">
+                                <h6>Chef John Doe</h6>
+                                <p>Expert in Italian Cuisine</p>
+                            </div>
+                        </div>
+                        <a href="#" class="ctaButton">View Recipe</a>
+                    </div>
+                </div>
+                <div class="heroImg">
+                    <img src="/images/hero-image.png" alt="Featured Dish" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- categories -->
+    <section class="category container">
+        <div class="category-title">
+            <h2>Categories</h2>
+            <a href="/" class="category-btn">View all Categories</a>
+        </div>
+        <div class="category-cards column" id="category-container">
+            <!-- col-1 -->
+            <!-- <div class="category-cards">
+                <div class="cat-card">
+                    <img src="/images//image 25.png" alt="categories-1" />
+                    <h6>Breakfast</h6>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Tasty Recipes -->
+    <div class="recipeSection-title">
+        <h2>Simple and tasty recipes</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Enim ad minim veniam.</p>
+    </div>
+    <div class="recipe-container">
+        <!-- col-1 -->
+        <!-- <div class="cart">
+            <img src="images/tasty-recipes.png" />
+            <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
+            <div class="time">
+                <div class="row">
+                    <p><img src="images/clock.svg" /> 30 Minutes</p>
+                </div>
+                <div class="row2">
+                    <p><img src="images/ForkKnife.svg" /> 20 mins</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+
+    <!-- Own Kitchen -->
+    <Section class="onw-kitchen">
+        <div class="onw-kitchen-container">
+            <div class="onw-kitchen-textContainer">
+                <h2>Everyone can be a chef in their own kitchen</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqut enim ad minim</p>
+
+                    <a href="#" class="onw-kitchen-btnContainer">Learn More</a>
+            </div>
+            <div class="onw-kitchen-imgContainer">
+                <img src="/images/onw-kitchen-Image.png" alt="onw-kitchen-Img" />
+            </div>
+        </div>
+    </Section>
+
+
+
+
+
+
+
+
+    <!-- html code End-->
+
+    <!-- ######################### -->
+
+    <script>
+        // categories-items  
+        const categoryContainer = document.getElementById('category-container');
+        for (let i = 0; i < 8; i++) {
+            const categoryCardDiv = document.createElement('div');
+            categoryCardDiv.className = 'category-cards';
+            const catCardDiv = document.createElement('div');
+            catCardDiv.className = 'cat-card';
+            const img = document.createElement('img');
+            img.src = '/images/image 25.png';
+            img.alt = 'categories-' + (i + 1);
+            const heading = document.createElement('h6');
+            heading.textContent = 'Breakfast';
+            catCardDiv.appendChild(img);
+            catCardDiv.appendChild(heading);
+            categoryCardDiv.appendChild(catCardDiv);
+            categoryContainer.appendChild(categoryCardDiv);
+        }
+
+        // recipe-container  
+        const recipeContainer = document.querySelector('.recipe-container');
+
+        for (let i = 0; i < 8; i++) {
+            const recipeCard = `
+                    <div class="cart">
+                        <img src="images/tasty-recipes.png" />
+                        <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
+                        <div class="time">
+                            <div class="row">
+                                <p><img src="images/clock.svg" /> 30 Minutes</p>
+                            </div>
+                            <div class="row2">
+                                <p><img src="images/ForkKnife.svg" /> 20 mins</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            recipeContainer.innerHTML += recipeCard;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
