@@ -802,9 +802,7 @@ p {
 
 @media (max-width: 768px) {
 
-    html{
-        justify-self: center;
-    }
+   
     body {
         width: 100%;
         margin: 0;
@@ -943,7 +941,7 @@ p {
     }
 
     /* Categories */
-    
+
 
 
 
