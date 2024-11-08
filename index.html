@@ -304,7 +304,7 @@
             <div class="onw-kitchen-textContainer">
                 <h2>Try this delicious recipe to make your day</h2>
             </div>
-            <div class="onw-kitchen-imgContainer" style="background: white;">
+            <div class="onw-kitchen-imgContainer" style="background: white; margin-left:10%;border-radius: 0px;">
                 <p style="margin-top: 8%;color: #aca7a1;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Magnam aspernatur quo aut id dolor, repellat commodi, voluptate laudantium iusto fuga neque!
                     Reprehenderit repudiandae harum voluptatem quidem soluta atque vero!</p>
@@ -329,7 +329,6 @@
 
 
     <!-- email Subscribe -->
-
 
 
     <!-- footer -->
@@ -467,6 +466,7 @@
 
         const recommendedMenus = document.getElementById("recommendedMenus");
         const recipeHTML = `
+        <a href="/" style="color: black;">
             <div class="cart" style="background: white;">
                 <img src="images/food-03.jpg" loading="lazy" />
                 <h5>Mixed Tropical Fruit Salad with Superfood Boosts</h5>
@@ -479,6 +479,7 @@
                     </div>
                 </div>
             </div>
+        </a>
         `;
         for (let i = 0; i < 8; i++) {
             recommendedMenus.innerHTML += recipeHTML;
