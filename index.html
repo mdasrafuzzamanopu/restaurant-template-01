@@ -23,7 +23,7 @@
             <span class="logoText">Black Art Studio</span>
             <span class="logoDot">.</span>
         </a>
-        <nav class="navigation">
+        <nav class="navigation" id="navMenu">
             <a href="/" class="navLink">Home</a>
             <a href="#" class="navLink">Recipes</a>
             <a href="#" class="navLink">Blog</a>
@@ -32,7 +32,9 @@
         </nav>
         <div class="socialMedia socialMedia-icon">
         </div>
+        <div class="hamburger" id="hamburgerIcon"></div>
     </header>
+    
 
     <!-- hero-section -->
     <div class="hero">
@@ -383,6 +385,11 @@
     <!-- ######################### -->
 
     <script>
+        // nav bar 
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.navigation').classList.toggle('active');
+        });
 
         // social-icon
         class SocialMediaIcons {
