@@ -12,10 +12,6 @@ body {
     background-color: white;
 }
 
-.a {
-    text-decoration: none;
-}
-
 .logo-image {
     height: auto;
     max-width: 100%;
@@ -202,11 +198,14 @@ p {
     height: 526px;
 }
 
+
+
+/* Category Section */
+
 /* Category Section */
 
 .category {
     padding: 2em 0;
-
 }
 
 .category-title {
@@ -217,29 +216,28 @@ p {
     gap: 2em;
 }
 
-h2 {
+.category-title h2 {
     font-weight: 600;
     font-size: clamp(30px, 5vw, 50px);
     text-transform: capitalize;
 }
 
-
 .category-title a {
     font-weight: 600;
     font-size: 16px;
     text-transform: capitalize;
-    color: #000;
+    background: var(--cl-4);
     padding: 0.8em 1.5em;
     border-radius: 15px;
     text-decoration: none;
-    background-color: #f0ffff;
-
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    /* Added transition for smooth hover effect */
 }
 
 .category-title a:hover {
-    color: #e63946;
-    box-shadow: 3px 3px 6px var(--cl-6--);
-    background-color: #f0ffff;
+    background: var(--c1-3);
+    color: var(--cl-1);
+    box-shadow: 3px 3px 6px var(--cl-6);
 }
 
 /* Category Cards */
@@ -250,7 +248,7 @@ h2 {
     padding: 2em 0;
 }
 
-.cat-card {
+.category-cat-card {
     text-align: center;
     background: linear-gradient(180deg, rgba(112, 130, 70, 0) 0%, rgba(112, 130, 70, 0.2) 100%);
     padding: 2em;
@@ -258,21 +256,22 @@ h2 {
     transition: transform 0.3s;
 }
 
-.cat-card img {
+.category-cat-card img {
     width: 100px;
     height: 100px;
     opacity: 1;
 }
 
-.cat-card h6 {
+.category-cat-card h6 {
     font-weight: 600;
     font-size: 18px;
     padding-top: 1.5em;
 }
 
-.cat-card:hover {
+.category-cat-card:hover {
     transform: scale(0.95);
 }
+
 
 /* subscribe */
 .nav-links li a {

@@ -92,12 +92,12 @@
         </div>
         <div class="category-cards column" id="category-container">
             <!-- col-1 -->
-            <!-- <div class="category-cards">
-                <div class="cat-card">
+            <div class="category-cards">
+                <div class="category-cat-card">
                     <img src="/images//image 25.png" loading="lazy" alt="categories-1" />
                     <h6>Breakfast</h6>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
 
@@ -448,15 +448,19 @@
         const categoryContainer = document.getElementById('category-container');
         for (let i = 0; i < 8; i++) {
             const categoryCardDiv = document.createElement('div');
-            categoryCardDiv.class = 'category-cards';
+            categoryCardDiv.className = 'category-cards'; // Use className instead of class
+
             const catCardDiv = document.createElement('div');
-            catCardDiv.class = 'cat-card';
+            catCardDiv.className = 'category-cat-card'; // Use className instead of class
+
             const img = document.createElement('img');
             img.src = '/images/image 25.png';
             img.alt = 'categories-' + (i + 1);
             img.loading = "lazy";
+
             const heading = document.createElement('h6');
             heading.textContent = 'Breakfast';
+
             catCardDiv.appendChild(img);
             catCardDiv.appendChild(heading);
             categoryCardDiv.appendChild(catCardDiv);
