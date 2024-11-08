@@ -372,7 +372,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2020 Flowbase. Powered by <span class="powered-by">BlackArtStudio</span><span>.</span></p>
+            <p>© <span id="current-year"></span> Flowbase. Powered by <span
+                    class="powered-by">BlackArtStudio</span><span>.</span></p>
         </div>
     </footer>
 
@@ -505,7 +506,8 @@
             recommendedMenus.innerHTML += recipeHTML;
         }
 
-
+        // footer year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
     </script>
 
