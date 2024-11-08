@@ -2,6 +2,7 @@
 
 * {
     font-family: "Inter", sans-serif;
+    text-decoration: none;
 }
 
 body {
@@ -795,3 +796,5 @@ p {
     top: 40%;
     transform: translateX(10%);
 }
+
+
