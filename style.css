@@ -87,7 +87,7 @@ body {
     padding: 40px 0;
     margin: initial;
     margin-top: 2%;
-    background-color: azure;
+    background-color: #f0ffff;
     border-radius: 47px;
     height: 446px;
 }
@@ -226,8 +226,9 @@ p {
     font-weight: 600;
     font-size: 16px;
     text-transform: capitalize;
-    background: var(--cl-4);
+    background: #000000;
     padding: 0.8em 1.5em;
+    color: rgb(255, 255, 255);
     border-radius: 15px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
@@ -235,8 +236,7 @@ p {
 }
 
 .category-title a:hover {
-    background: var(--c1-3);
-    color: var(--cl-1);
+    background: rgb(243, 11, 11);
     box-shadow: 3px 3px 6px var(--cl-6);
 }
 
@@ -255,6 +255,7 @@ p {
     border-radius: 30px;
     transition: transform 0.3s;
 }
+
 
 .category-cat-card img {
     width: 100px;
