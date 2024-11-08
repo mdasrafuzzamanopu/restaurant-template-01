@@ -329,6 +329,26 @@
 
 
     <!-- email Subscribe -->
+    <div class="subscribe-item">
+        <img alt="food-1" src="images/subscribe-left.png" class="section-left-img" />
+        <div class="subscribe-item-one">
+            <div class="subscribe-text">
+                <h1>Deliciousness to your inbox</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus omnis voluptate dignissimos esse
+                    temporibus nulla nobis eaque suscipit cupiditate animi, exercitationem deserunt tempore accusantium
+                    labore praesentium qui impedit expedita provident.</p>
+            </div>
+            <div class="subscription-container">
+                <form class="subscription-form">
+                    <input type="email" name="subscribe" placeholder="Your email address..."
+                        class="subscription-input" />
+                    <button type="submit" class="subscription-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <img alt="food-2" src="images/subscribe-right.png" class="section-right-img" />
+    </div>
+
 
 
     <!-- footer -->
@@ -386,12 +406,12 @@
                         icon: '/images/instagram.svg',
                         alt: 'Instagram logo'
                     },
-                    {
-                        name: 'Youtube',
-                        url: '#',
-                        icon: '/images/youtube.svg',
-                        alt: 'Youtube logo'
-                    }
+                    // {
+                    //    name: 'Youtube',
+                    //    url: '#',
+                    //    icon: '/images/youtube.svg',
+                    //    alt: 'Youtube logo'
+                    //}
                 ];
             }
             createSocialIcons() {
@@ -399,7 +419,7 @@
                 if (containers.length > 0) {
                     Array.from(containers).forEach(container => {
                         const div = document.createElement('div');
-                        div.className = 'social-icons';
+                        div.class = 'social-icons';
                         this.socialMediaLinks.forEach(social => {
                             const a = document.createElement('a');
                             a.href = social.url;
@@ -408,7 +428,7 @@
                             img.src = social.icon;
                             img.alt = social.alt;
                             img.loading = "lazy";
-                            img.className = 'socialIcon';
+                            img.class = 'socialIcon';
                             a.appendChild(img);
                             div.appendChild(a);
                         });
@@ -427,9 +447,9 @@
         const categoryContainer = document.getElementById('category-container');
         for (let i = 0; i < 8; i++) {
             const categoryCardDiv = document.createElement('div');
-            categoryCardDiv.className = 'category-cards';
+            categoryCardDiv.class = 'category-cards';
             const catCardDiv = document.createElement('div');
-            catCardDiv.className = 'cat-card';
+            catCardDiv.class = 'cat-card';
             const img = document.createElement('img');
             img.src = '/images/image 25.png';
             img.alt = 'categories-' + (i + 1);
