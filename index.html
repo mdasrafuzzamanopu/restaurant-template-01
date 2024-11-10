@@ -457,29 +457,42 @@
 
 
         // categories-items  
+
+
         const categoryContainer = document.getElementById('category-container');
-        for (let i = 0; i < 8; i++) {
-            const categoryCardDiv = document.createElement('div');
-            categoryCardDiv.className = 'category-cards'; // Use className instead of class
 
-            const catCardDiv = document.createElement('div');
-            catCardDiv.className = 'category-cat-card'; // Use className instead of class
-
-            const img = document.createElement('img');
-            img.src = '/images/image 25.png';
-            img.alt = 'categories-' + (i + 1);
-            img.loading = "lazy";
-
-            const heading = document.createElement('h6');
-            heading.textContent = 'Breakfast';
-
-            catCardDiv.appendChild(img);
-            catCardDiv.appendChild(heading);
-            categoryCardDiv.appendChild(catCardDiv);
-            categoryContainer.appendChild(categoryCardDiv);
+        function getCategoryCount() {
+            if (window.innerWidth < 1450) {
+                return 7; 
+            }
+            return 8; 
         }
+        function generateCategories() {
+            const categoryCount = getCategoryCount();
+            categoryContainer.innerHTML = '';
+            for (let i = 0; i < categoryCount; i++) {
+                const categoryCardDiv = document.createElement('div');
+                categoryCardDiv.className = 'category-cards';
 
-        // recipe-container  
+                const catCardDiv = document.createElement('div');
+                catCardDiv.className = 'category-cat-card';
+
+                const img = document.createElement('img');
+                img.src = '/images/image 25.png'; 
+                img.alt = 'categories-' + (i + 1);
+                img.loading = "lazy";
+
+                const heading = document.createElement('h6');
+                heading.textContent = 'Breakfast';
+
+                catCardDiv.appendChild(img);
+                catCardDiv.appendChild(heading);
+                categoryCardDiv.appendChild(catCardDiv);
+                categoryContainer.appendChild(categoryCardDiv);
+            }
+        }
+        generateCategories();
+        window.addEventListener('resize', generateCategories);
         const recipeContainer = document.querySelector('.recipe-container');
         for (let i = 0; i < 8; i++) {
             const recipeCard = `
@@ -498,6 +511,7 @@
                 `;
             recipeContainer.innerHTML += recipeCard;
         }
+
 
         // recommended menu
 
