@@ -201,7 +201,7 @@ p {
 
 
 
-/* Category Section */
+
 
 /* Category Section */
 
@@ -240,7 +240,6 @@ p {
     background: rgb(243, 11, 11);
     box-shadow: 3px 3px 6px var(--cl-6);
 }
-
 /* Category Cards */
 .category-cards {
     display: grid;
@@ -256,7 +255,6 @@ p {
     border-radius: 30px;
     transition: transform 0.3s;
 }
-
 
 .category-cat-card img {
     width: 100px;
@@ -286,14 +284,14 @@ p {
     color: #FF5722;
 }
 
-.social-icons a {
+/* .social-icons a {
     font-size: 1.25rem;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
     color: #FF5722;
-}
+} */
 
 .recipeSection-title {
     text-align: center;
@@ -800,7 +798,7 @@ p {
 
 /* mobile view */
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
 
    
     body {
@@ -864,7 +862,6 @@ p {
         top: 8px;
     }
 
-    /* Transform hamburger to "X" on menu open */
     .hamburger.active {
         background-color: transparent;
     }
@@ -881,7 +878,6 @@ p {
 
     .socialMedia {
         display: none;
-        /* Hide social media icons */
     }
 
     /* hero */
@@ -940,8 +936,47 @@ p {
         height: auto;
     }
 
-    /* Categories */
 
+    /* Categories */
+    .category {
+        padding-top: 20em; 
+    }
+
+    .category-title {
+        gap: 1em; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-title h2 {
+        font-size: clamp(24px, 6vw, 40px);
+    }
+
+    .category-title a {
+        display: none;
+        font-size: 14px; 
+        padding: 0.6em 1em;
+    }
+
+    .category-cards {
+        grid-template-columns: repeat(1, 2fr);
+        gap: 0.5em;
+        padding: 1em 0;
+    }
+
+    .category-cat-card {
+        padding: 1.5em; 
+        border-radius: 20px; 
+    }
+
+    .category-cat-card img {
+        width: 80px; 
+        height: 80px;
+    }
+
+    .category-cat-card h6 {
+        font-size: 16px; 
+    }
 
 
 
