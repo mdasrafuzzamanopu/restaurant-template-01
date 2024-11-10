@@ -94,17 +94,15 @@
         </div>
         <div class="category-cards column" id="category-container">
             <!-- col-1 -->
-
-            <!-- 
-            <a >
-            <div class="category-cards">
-                <div class="category-cat-card">
-                    <img src="/images//image 25.png" loading="lazy" alt="categories-1" />
-                    <h6>Breakfast</h6>
+            <!-- <a href="#">
+                <div class="category-cards">
+                    <div class="category-cat-card">
+                        <img src="/images//image 25.png" loading="lazy" alt="categories-1" />
+                        <h6>Breakfast</h6>
+                    </div>
                 </div>
-            </div> 
-            </a>
-            -->
+            </a> -->
+
         </div>
     </section>
 
@@ -395,7 +393,7 @@
             this.classList.toggle('active');
             document.querySelector('.navigation').classList.toggle('active');
         });
-
+    
         // social-icons
         class SocialMediaIcons {
             constructor(containerClass) {
@@ -412,7 +410,7 @@
                 if (containers.length > 0) {
                     Array.from(containers).forEach(container => {
                         const div = document.createElement('div');
-                        div.classList.add('social-icons'); // Corrected class assignment
+                        div.classList.add('social-icons'); 
                         this.socialMediaLinks.forEach(social => {
                             const a = document.createElement('a');
                             a.href = social.url;
@@ -421,7 +419,7 @@
                             img.src = social.icon;
                             img.alt = social.alt;
                             img.loading = "lazy";
-                            img.classList.add('socialIcon'); // Corrected class assignment
+                            img.classList.add('socialIcon');
                             a.appendChild(img);
                             div.appendChild(a);
                         });
@@ -434,105 +432,109 @@
         }
         const socialIcons = new SocialMediaIcons('socialMedia-icon');
         socialIcons.createSocialIcons();
-
+    
         // categories-items
         const categoryContainer = document.getElementById('category-container');
-
+    
         function getLaptopCount() {
             if (window.innerWidth < 1450) {
-                return 6; 
+                return 6;
             }
-            return 8; 
+            return 8;
         }
-
-        function getcategoryCount() {
+    
+        function getCategoryCount() {  
             if (window.innerWidth < 1450) {
-                return 7; 
+                return 7;
             }
-            return 8; 
+            return 8;
         }
-
-        let categoryCount = getLaptopCount(); 
-
+    
+        let categoryCount = getLaptopCount();
+    
         function generateCategories() {
-            categoresCount = getcategoryCount();
+            const categoriesCount = getCategoryCount();
             categoryContainer.innerHTML = ''; 
-            for (let i = 0; i < categoresCount; i++) {
-                const categoryCardDiv = document.createElement('div');
-                categoryCardDiv.className = 'category-cards';
-
-                const catCardDiv = document.createElement('div');
-                catCardDiv.className = 'category-cat-card';
-
-                const img = document.createElement('img');
-                img.src = '/images/image 25.png';
-                img.alt = 'categories-' + (i + 1);
-                img.loading = "lazy";
-
-                const heading = document.createElement('h6');
-                heading.textContent = 'Breakfast';
-
-                catCardDiv.appendChild(img);
-                catCardDiv.appendChild(heading);
-                categoryCardDiv.appendChild(catCardDiv);
-                categoryContainer.appendChild(categoryCardDiv);
+            const categoryNames = ['Breakfast', 'Vegan', 'Meat', 'Dessert', 'Lunch', 'Chocolate','Juice','Drink']; 
+            for (let i = 0; i < categoriesCount; i++) {
+                const recipeCard = `
+                    <a href="#">
+                        <div class="category-cards">
+                            <div class="category-cat-card">
+                                <img src="/images/categories/category-${i+1}.png" loading="lazy" alt="categories-${i+1}" /> 
+                                <h6>${categoryNames[i % categoryNames.length]}</h6> <!-- Dynamically change category names -->
+                            </div>
+                        </div>
+                    </a>
+                `;
+                categoryContainer.innerHTML += recipeCard;
             }
-            generateRecipeCards();  
-            generateRecommendedMenus();  
         }
-
+    
         function generateRecipeCards() {
             const recipeContainer = document.querySelector('.recipe-container');
-            recipeContainer.innerHTML = ''; 
+            recipeContainer.innerHTML = '';
             for (let i = 0; i < categoryCount; i++) {
                 const recipeCard = `
-            <div class="cart">
-                <img src="images/tasty-recipes.png" alt="tasty-recipes"/>
-                <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
-                <div class="time">
-                    <div class="row">
-                        <p><img src="images/clock.svg" alt="clock" loading="lazy" /> 30 Minutes</p>
+                    <div class="cart">
+                        <img src="images/tasty-recipes.png" alt="tasty-recipes"/>
+                        <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
+                        <div class="time">
+                            <div class="row">
+                                <p><img src="images/clock.svg" alt="clock" loading="lazy" /> 30 Minutes</p>
+                            </div>
+                            <div class="row2">
+                                <p><img src="images/ForkKnife.svg" alt="ForkKnife" loading="lazy"/> 20 mins</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row2">
-                        <p><img src="images/ForkKnife.svg" alt="ForkKnife" loading="lazy"/> 20 mins</p>
-                    </div>
-                </div>
-            </div>
-        `;
-                recipeContainer.insertAdjacentHTML('beforeend', recipeCard); 
+                `;
+                recipeContainer.insertAdjacentHTML('beforeend', recipeCard);
             }
         }
-
+    
         function generateRecommendedMenus() {
             const recommendedMenus = document.getElementById("recommendedMenus");
-            recommendedMenus.innerHTML = ''; 
+            recommendedMenus.innerHTML = '';
             const recipeHTML = `
-        <a href="/" style="color: black;">
-            <div class="cart" style="background: white;">
-                <img src="images/food-03.jpg" loading="lazy" alt="recommended Menus" />
-                <h5>Mixed Tropical Fruit Salad with Superfood Boosts</h5>
-                <div class="time" style="justify-content: center;">
-                    <div class="row">
-                        <p><img src="images/clock.svg" loading="lazy" alt="clock" /> 30 Minutes</p>
+                <a href="/" style="color: black;">
+                    <div class="cart" style="background: white;">
+                        <img src="images/food-03.jpg" loading="lazy" alt="recommended Menus" />
+                        <h5>Mixed Tropical Fruit Salad with Superfood Boosts</h5>
+                        <div class="time" style="justify-content: center;">
+                            <div class="row">
+                                <p><img src="images/clock.svg" loading="lazy" alt="clock" /> 30 Minutes</p>
+                            </div>
+                            <div class="row2">
+                                <p><img src="images/ForkKnife.svg" loading="lazy" alt="ForkKnife" /> 20 mins</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row2">
-                        <p><img src="images/ForkKnife.svg" loading="lazy" alt="ForkKnife" /> 20 mins</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-    `;
+                </a>
+            `;
             for (let i = 0; i < categoryCount; i++) {
                 recommendedMenus.insertAdjacentHTML('beforeend', recipeHTML);
             }
         }
+    
+        // Initial category generation
         generateCategories();
-        window.addEventListener('resize', generateCategories);
-
+        generateRecipeCards();
+        generateRecommendedMenus();
+    
+        // Add event listener for resize to regenerate categories
+        window.addEventListener('resize', function() {
+            categoryCount = getLaptopCount();
+            generateCategories();
+            generateRecipeCards();
+            generateRecommendedMenus();
+        });
+    
         // footer year
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
+    
     </script>
+    
 
 </body>
 
