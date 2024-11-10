@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackArtStudio - Restaurant</title>
-    <meta name="description" content="Welcome to BlackArtStudio, a premier restaurant offering delicious meals, signature dishes, and a cozy dining experience. Explore our menu and enjoy an unforgettable meal today.">
-    <meta name="keywords" content="restaurant, fine dining, BlackArtStudio, delicious meals, signature dishes, food, gourmet, cozy restaurant, dining experience">
+    <meta name="description"
+        content="Welcome to BlackArtStudio, a premier restaurant offering delicious meals, signature dishes, and a cozy dining experience. Explore our menu and enjoy an unforgettable meal today.">
+    <meta name="keywords"
+        content="restaurant, fine dining, BlackArtStudio, delicious meals, signature dishes, food, gourmet, cozy restaurant, dining experience">
     <meta property="og:title" content="BlackArtStudio - Restaurant">
-    <meta property="og:description" content="Discover delicious meals, signature dishes, and a cozy atmosphere at BlackArtStudio. Join us for a unique dining experience.">
-    <meta property="og:image" content="images/restaurant-image.jpg"> 
+    <meta property="og:description"
+        content="Discover delicious meals, signature dishes, and a cozy atmosphere at BlackArtStudio. Join us for a unique dining experience.">
+    <meta property="og:image" content="images/restaurant-image.jpg">
     <meta property="og:url" content="https://restaurant-template-01-five.vercel.app">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BlackArtStudio - Restaurant">
-    <meta name="twitter:description" content="Explore BlackArtStudio's exquisite menu and vibrant restaurant experience. Taste the best gourmet dishes in a comfortable setting.">
-    <meta name="twitter:image" content="images/restaurant-image.jpg"> 
+    <meta name="twitter:description"
+        content="Explore BlackArtStudio's exquisite menu and vibrant restaurant experience. Taste the best gourmet dishes in a comfortable setting.">
+    <meta name="twitter:image" content="images/restaurant-image.jpg">
     <link rel="icon" href="images/Black-art-studio-icon.png" sizes="16x16" loading="lazy" type="image/png" />
     <link rel="icon" href="images/Black-art-studio-icon.png" sizes="32x32" loading="lazy" type="image/png" />
     <link rel="icon" href="images/Black-art-studio-icon.png" sizes="48x48" loading="lazy" type="image/png" />
@@ -52,7 +56,9 @@
             <div class="heroContainer">
                 <div class="heroContent">
                     <div class="recipe">
-                        <img src="./images/hot-pecipes.png" loading="lazy" alt="Recipe Icon" />
+                        <img src="images/hot-pecipes.png"
+                            srcset="images/hot-pecipes.png 1x"
+                            sizes="(max-width: 600px) 20vw, 5vw" loading="lazy" alt="Recipe Icon" />
                         <span>Hot Recipes</span>
                     </div>
                     <h1>Spicy delicious chicken wings</h1>
@@ -71,7 +77,8 @@
                     <div class="profileBtn">
                         <div class="profile">
                             <div class="pImg" style="margin-right: 10px;">
-                                <img src="images/person.png" loading="lazy" alt="Chef Profile" />
+                                <img src="images/person.png" srcset="images/person.png 1x"
+                                    sizes="(max-width: 600px) 100vw, 50vw" loading="lazy" alt="Chef Profile" />
                             </div>
                             <div class="column">
                                 <h6>Chef John Doe</h6>
@@ -403,7 +410,7 @@
             this.classList.toggle('active');
             document.querySelector('.navigation').classList.toggle('active');
         });
-    
+
         // social-icons
         class SocialMediaIcons {
             constructor(containerClass) {
@@ -420,7 +427,7 @@
                 if (containers.length > 0) {
                     Array.from(containers).forEach(container => {
                         const div = document.createElement('div');
-                        div.classList.add('social-icons'); 
+                        div.classList.add('social-icons');
                         this.socialMediaLinks.forEach(social => {
                             const a = document.createElement('a');
                             a.href = social.url;
@@ -442,36 +449,36 @@
         }
         const socialIcons = new SocialMediaIcons('socialMedia-icon');
         socialIcons.createSocialIcons();
-    
+
         // categories-items
         const categoryContainer = document.getElementById('category-container');
-    
+
         function getLaptopCount() {
             if (window.innerWidth < 1450) {
                 return 6;
             }
             return 8;
         }
-    
-        function getCategoryCount() {  
+
+        function getCategoryCount() {
             if (window.innerWidth < 1450) {
                 return 7;
             }
             return 8;
         }
-    
+
         let categoryCount = getLaptopCount();
-    
+
         function generateCategories() {
             const categoriesCount = getCategoryCount();
-            categoryContainer.innerHTML = ''; 
-            const categoryNames = ['Breakfast', 'Vegan', 'Meat', 'Dessert', 'Lunch', 'Chocolate','Juice','Drink']; 
+            categoryContainer.innerHTML = '';
+            const categoryNames = ['Breakfast', 'Vegan', 'Meat', 'Dessert', 'Lunch', 'Chocolate', 'Juice', 'Drink'];
             for (let i = 0; i < categoriesCount; i++) {
                 const recipeCard = `
                     <a href="#${categoryNames[i % categoryNames.length]}">
                         <div class="category-cards">
                             <div class="category-cat-card">
-                                <img src="images/categories/category-${i+1}.png" loading="lazy" alt="categories-${i+1}" /> 
+                                <img src="images/categories/category-${i + 1}.png" loading="lazy" alt="categories-${i + 1}" /> 
                                 <h6>${categoryNames[i % categoryNames.length]}</h6> <!-- Dynamically change category names -->
                             </div>
                         </div>
@@ -480,7 +487,7 @@
                 categoryContainer.innerHTML += recipeCard;
             }
         }
-    
+
         function generateRecipeCards() {
             const recipeContainer = document.querySelector('.recipe-container');
             recipeContainer.innerHTML = '';
@@ -502,7 +509,7 @@
                 recipeContainer.insertAdjacentHTML('beforeend', recipeCard);
             }
         }
-    
+
         function generateRecommendedMenus() {
             const recommendedMenus = document.getElementById("recommendedMenus");
             recommendedMenus.innerHTML = '';
@@ -526,25 +533,25 @@
                 recommendedMenus.insertAdjacentHTML('beforeend', recipeHTML);
             }
         }
-    
+
         // Initial category generation
         generateCategories();
         generateRecipeCards();
         generateRecommendedMenus();
-    
+
         // Add event listener for resize to regenerate categories
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             categoryCount = getLaptopCount();
             generateCategories();
             generateRecipeCards();
             generateRecommendedMenus();
         });
-    
+
         // footer year
         document.getElementById('current-year').textContent = new Date().getFullYear();
-    
+
     </script>
-    
+
 
 </body>
 

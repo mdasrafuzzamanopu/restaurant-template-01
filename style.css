@@ -176,7 +176,7 @@ p {
 .pImg img {
     width: 100%;      
     height: auto;        
-    margin-right: 12px;
+    margin-right: 10px;
 
 }
 
@@ -1228,5 +1228,15 @@ p {
 @media (min-width: 1024px) {
     #category-container {
         grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+/* Optional: Retina display support with high-res images */
+@media only screen and (min-device-pixel-ratio: 2) {
+    .pImg img {
+        content: url(images/person.png);  
+    }
+    .recipe img {
+        content: url(images/hot-pecipes.png);  
     }
 }
