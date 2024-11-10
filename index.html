@@ -458,7 +458,7 @@
             const categoryNames = ['Breakfast', 'Vegan', 'Meat', 'Dessert', 'Lunch', 'Chocolate','Juice','Drink']; 
             for (let i = 0; i < categoriesCount; i++) {
                 const recipeCard = `
-                    <a href="#">
+                    <a href="#${categoryNames[i % categoryNames.length]}">
                         <div class="category-cards">
                             <div class="category-cat-card">
                                 <img src="/images/categories/category-${i+1}.png" loading="lazy" alt="categories-${i+1}" /> 
