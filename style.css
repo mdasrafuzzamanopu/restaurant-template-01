@@ -827,7 +827,7 @@ p {
     body {
         width: 100%;
         margin: 0;
-        scrollbar-color: black #f1f1f1;
+        scrollbar-color: black #f1f1f1;        
     }
 
     .header {
@@ -1219,7 +1219,6 @@ p {
         font-size: 16px;
     }
 
-    /* scrollbar */
 
 
 }
