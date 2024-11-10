@@ -390,41 +390,21 @@
     <!-- ######################### -->
 
     <script>
-        // nav bar 
+        // nav bar
         document.querySelector('.hamburger').addEventListener('click', function () {
             this.classList.toggle('active');
             document.querySelector('.navigation').classList.toggle('active');
         });
 
-        // social-icon
+        // social-icons
         class SocialMediaIcons {
             constructor(containerClass) {
                 this.containerClass = containerClass;
                 this.socialMediaLinks = [
-                    {
-                        name: 'Facebook',
-                        url: '#',
-                        icon: 'images/facebook.svg',
-                        alt: 'Facebook logo'
-                    },
-                    {
-                        name: 'Twitter',
-                        url: '#',
-                        icon: 'images/twitter.svg',
-                        alt: 'Twitter logo'
-                    },
-                    {
-                        name: 'Instagram',
-                        url: '#',
-                        icon: 'images/instagram.svg',
-                        alt: 'Instagram logo'
-                    },
-                    {
-                        name: 'Youtube',
-                        url: '#',
-                        icon: 'images/youtube.svg',
-                        alt: 'Youtube logo'
-                    }
+                    { name: 'Facebook', url: '#', icon: 'images/facebook.svg', alt: 'Facebook logo' },
+                    { name: 'Twitter', url: '#', icon: 'images/twitter.svg', alt: 'Twitter logo' },
+                    { name: 'Instagram', url: '#', icon: 'images/instagram.svg', alt: 'Instagram logo' },
+                    { name: 'Youtube', url: '#', icon: 'images/youtube.svg', alt: 'Youtube logo' }
                 ];
             }
             createSocialIcons() {
@@ -432,7 +412,7 @@
                 if (containers.length > 0) {
                     Array.from(containers).forEach(container => {
                         const div = document.createElement('div');
-                        div.class = 'social-icons';
+                        div.classList.add('social-icons'); // Corrected class assignment
                         this.socialMediaLinks.forEach(social => {
                             const a = document.createElement('a');
                             a.href = social.url;
@@ -441,7 +421,7 @@
                             img.src = social.icon;
                             img.alt = social.alt;
                             img.loading = "lazy";
-                            img.class = 'socialIcon';
+                            img.classList.add('socialIcon'); // Corrected class assignment
                             a.appendChild(img);
                             div.appendChild(a);
                         });
@@ -455,21 +435,28 @@
         const socialIcons = new SocialMediaIcons('socialMedia-icon');
         socialIcons.createSocialIcons();
 
-
-        // categories-items  
-
-
+        // categories-items
         const categoryContainer = document.getElementById('category-container');
 
-        function getCategoryCount() {
+        function getLaptopCount() {
+            if (window.innerWidth < 1450) {
+                return 6; 
+            }
+            return 8; 
+        }
+
+        function getcategoryCount() {
             if (window.innerWidth < 1450) {
                 return 7; 
             }
             return 8; 
         }
+
+        let categoryCount = getLaptopCount(); 
+
         function generateCategories() {
-            const categoryCount = getCategoryCount();
-            categoryContainer.innerHTML = '';
+            categoryCount = getcategoryCount();
+            categoryContainer.innerHTML = ''; 
             for (let i = 0; i < categoryCount; i++) {
                 const categoryCardDiv = document.createElement('div');
                 categoryCardDiv.className = 'category-cards';
@@ -478,7 +465,7 @@
                 catCardDiv.className = 'category-cat-card';
 
                 const img = document.createElement('img');
-                img.src = '/images/image 25.png'; 
+                img.src = '/images/image 25.png';
                 img.alt = 'categories-' + (i + 1);
                 img.loading = "lazy";
 
@@ -490,33 +477,36 @@
                 categoryCardDiv.appendChild(catCardDiv);
                 categoryContainer.appendChild(categoryCardDiv);
             }
+            generateRecipeCards();  
+            generateRecommendedMenus();  
         }
-        generateCategories();
-        window.addEventListener('resize', generateCategories);
-        const recipeContainer = document.querySelector('.recipe-container');
-        for (let i = 0; i < 8; i++) {
-            const recipeCard = `
-                    <div class="cart">
-                        <img src="images/tasty-recipes.png" alt="tasty-recipes"/>
-                        <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
-                        <div class="time">
-                            <div class="row">
-                                <p><img src="images/clock.svg" alt="clock" loading="lazy" /> 30 Minutes</p>
-                            </div>
-                            <div class="row2">
-                                <p><img src="images/ForkKnife.svg" alt="ForkKnife" loading="lazy"/> 20 mins</p>
-                            </div>
-                        </div>
+
+        function generateRecipeCards() {
+            const recipeContainer = document.querySelector('.recipe-container');
+            recipeContainer.innerHTML = ''; 
+            for (let i = 0; i < categoryCount; i++) {
+                const recipeCard = `
+            <div class="cart">
+                <img src="images/tasty-recipes.png" alt="tasty-recipes"/>
+                <h5>Fresh Lime Roasted Salmon with Ginger Sauce</h5>
+                <div class="time">
+                    <div class="row">
+                        <p><img src="images/clock.svg" alt="clock" loading="lazy" /> 30 Minutes</p>
                     </div>
-                `;
-            recipeContainer.innerHTML += recipeCard;
+                    <div class="row2">
+                        <p><img src="images/ForkKnife.svg" alt="ForkKnife" loading="lazy"/> 20 mins</p>
+                    </div>
+                </div>
+            </div>
+        `;
+                recipeContainer.insertAdjacentHTML('beforeend', recipeCard); 
+            }
         }
 
-
-        // recommended menu
-
-        const recommendedMenus = document.getElementById("recommendedMenus");
-        const recipeHTML = `
+        function generateRecommendedMenus() {
+            const recommendedMenus = document.getElementById("recommendedMenus");
+            recommendedMenus.innerHTML = ''; 
+            const recipeHTML = `
         <a href="/" style="color: black;">
             <div class="cart" style="background: white;">
                 <img src="images/food-03.jpg" loading="lazy" alt="recommended Menus" />
@@ -531,10 +521,13 @@
                 </div>
             </div>
         </a>
-        `;
-        for (let i = 0; i < 8; i++) {
-            recommendedMenus.innerHTML += recipeHTML;
+    `;
+            for (let i = 0; i < categoryCount; i++) {
+                recommendedMenus.insertAdjacentHTML('beforeend', recipeHTML);
+            }
         }
+        generateCategories();
+        window.addEventListener('resize', generateCategories);
 
         // footer year
         document.getElementById('current-year').textContent = new Date().getFullYear();
