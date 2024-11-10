@@ -211,14 +211,10 @@ p {
 }
 
 .heroImg img {
-    width: 665px;
-    /*max-width: 545px; */
-    height: 526px;
+    width: 100%;
+    height: auto;
+    max-width: 665px;
 }
-
-
-
-
 
 /* Category Section */
 
@@ -821,13 +817,13 @@ p {
 
 @media (max-width: 450px) {
     ::-webkit-scrollbar-thumb {
-        background-color: black; 
+        background-color: black;
     }
 
     body {
         width: 100%;
         margin: 0;
-        scrollbar-color: black #f1f1f1;        
+        scrollbar-color: black #f1f1f1;
     }
 
     .header {
@@ -1223,12 +1219,12 @@ p {
 
 @media (min-width: 768px) {
     #category-container {
-        grid-template-columns: repeat(6, 1fr); 
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     #category-container {
-        grid-template-columns: repeat(8, 1fr); 
+        grid-template-columns: repeat(8, 1fr);
     }
 }
