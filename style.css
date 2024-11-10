@@ -5,12 +5,29 @@
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+
 body {
     position: relative;
     height: 100vh;
     margin: 5px 10%;
     margin-bottom: 8%;
     background-color: white;
+    overflow-x: hidden;
+    scrollbar-color: red #f1f1f1;
 }
 
 .logo-image {
@@ -803,11 +820,14 @@ p {
 /* mobile view */
 
 @media (max-width: 450px) {
-
+    ::-webkit-scrollbar-thumb {
+        background-color: black; 
+    }
 
     body {
         width: 100%;
         margin: 0;
+        scrollbar-color: black #f1f1f1;
     }
 
     .header {
@@ -1162,7 +1182,7 @@ p {
         flex: none;
         width: 100%;
         margin-bottom: 15px;
-        place-content:center;
+        place-content: center;
     }
 
     .footer-left p {
@@ -1199,6 +1219,7 @@ p {
         font-size: 16px;
     }
 
-    // 
+    /* scrollbar */
+
 
 }
