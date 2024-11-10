@@ -240,6 +240,7 @@ p {
     background: rgb(243, 11, 11);
     box-shadow: 3px 3px 6px var(--cl-6);
 }
+
 /* Category Cards */
 .category-cards {
     display: grid;
@@ -416,6 +417,9 @@ p {
     height: auto;
     border-radius: 10px;
 }
+
+
+
 
 .instageam-section {
     background: linear-gradient(to bottom, white, rgb(231, 249, 253));
@@ -800,7 +804,7 @@ p {
 
 @media (max-width: 450px) {
 
-   
+
     body {
         width: 100%;
         margin: 0;
@@ -939,11 +943,11 @@ p {
 
     /* Categories */
     .category {
-        padding-top: 20em; 
+        padding-top: 20em;
     }
 
     .category-title {
-        gap: 1em; 
+        gap: 1em;
         flex-direction: column;
         align-items: center;
     }
@@ -954,7 +958,7 @@ p {
 
     .category-title a {
         display: none;
-        font-size: 14px; 
+        font-size: 14px;
         padding: 0.6em 1em;
     }
 
@@ -965,17 +969,154 @@ p {
     }
 
     .category-cat-card {
-        padding: 1.5em; 
-        border-radius: 20px; 
+        padding: 1.5em;
+        border-radius: 20px;
     }
 
     .category-cat-card img {
-        width: 80px; 
+        width: 80px;
         height: 80px;
     }
 
     .category-cat-card h6 {
-        font-size: 16px; 
+        font-size: 16px;
+    }
+
+    /* own kitchen */
+
+    .onw-kitchen {
+        flex-direction: column;
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .onw-kitchen-container {
+        flex-direction: column;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .onw-kitchen-textContainer {
+        max-width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .onw-kitchen-textContainer h2 {
+        font-size: 1.5em;
+    }
+
+    .onw-kitchen-textContainer p {
+        padding: 1em 0;
+        line-height: 1.4;
+    }
+
+    .onw-kitchen-btnContainer {
+        width: 50%;
+        text-align: center;
+        padding: 0.5em 1.5em;
+        margin-top: 1em;
+    }
+
+    .onw-kitchen-imgContainer {
+        flex: 1;
+        width: 100%;
+    }
+
+    .onw-kitchen-imgContainer img {
+        border-radius: 15px;
+    }
+
+    /* Instagram Section code */
+    .instageam-section {
+        padding: 1em 0;
+        margin: 1em 0;
+        border-radius: 20px;
+    }
+
+    .instageam-container {
+        padding: 0 0.5em;
+    }
+
+    .instageam-title {
+        margin-bottom: 1.5em;
+    }
+
+    .instageam-title h2 {
+        font-size: 1.5em;
+    }
+
+    .instageam-title p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .instagram-card {
+        grid-template-columns: 1fr;
+        gap: 1em;
+        padding: 1em 0;
+    }
+
+    /* instagram-post */
+    .instagram-post-container {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .instagram-post-header,
+    .instagram-post-footer {
+        padding: 10px 12px;
+    }
+
+    .instagram-post-header img.profile-pic {
+        width: 28px;
+        height: 28px;
+    }
+
+    .instagram-post-header .username {
+        font-size: 13px;
+    }
+
+    .instagram-post-header .location {
+        font-size: 11px;
+    }
+
+    .instagram-post-header .dots-icon {
+        font-size: 18px;
+    }
+
+    .instagram-post-image {
+        height: 250px;
+    }
+
+    .instagram-image-indicator {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .likes,
+    .caption,
+    .date {
+        font-size: 13px;
+    }
+
+    .date {
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    .footer-icons .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* instagram-btn */
+    .instagram-btn {
+        font-size: 14px;
+        max-width: 200px;
+        height: 30px;
+        margin-top: 10%;
+        padding: 0.5em;
     }
 
 
