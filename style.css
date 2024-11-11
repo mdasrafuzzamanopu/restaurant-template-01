@@ -131,7 +131,14 @@ body {
 .recipe {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 14px;
+    background: black;
+    width: max-content;
+    padding: 10px;
+    height: 25px;
+    border-radius: 10px;
+    color: white;
+
 }
 
 .recipe img {
@@ -919,7 +926,7 @@ p {
 
     .recipe {
         font-size: 16px;
-        justify-content: center;
+        justify-content: left;
     }
 
     h1 {
