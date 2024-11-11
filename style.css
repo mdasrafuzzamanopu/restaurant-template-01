@@ -186,6 +186,10 @@ p {
     align-items: center;
 }
 
+.pImg {
+    margin-right: 10px;
+}
+
 .pImg img {
     width: 100%;
     height: auto;
