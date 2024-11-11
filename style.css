@@ -1011,23 +1011,24 @@ p {
     }
 
     .category-cards {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 0.5em;
-        padding: 1em 0;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.2em;
+        padding: 0.5em 0;
     }
 
     .category-cat-card {
-        padding: 1.5em;
+        padding: 0.5em;
         border-radius: 20px;
     }
 
     .category-cat-card img {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
     }
 
     .category-cat-card h6 {
-        font-size: 16px;
+        font-size: 15px;
+        margin: 0;
     }
 
     /* own kitchen */
