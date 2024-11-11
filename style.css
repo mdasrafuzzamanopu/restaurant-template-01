@@ -964,7 +964,7 @@ p {
     }
 
     .heroImg img {
-        width: 100%;
+        width: 8%;
         height: auto;
         border-radius: 50px;
     }
@@ -1375,7 +1375,7 @@ p {
     }
 
     .heroImg img {
-        width: 100%;
+        width: 70%;
         height: auto;
         border-radius: 50px;
     }
