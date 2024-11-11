@@ -1641,6 +1641,13 @@ p {
         transition: background-color 0.3s;
     }
 
+    .subscription-input {
+        padding: 0px 0px;
+        font-size: 13px;
+        border: none;
+        flex: 2;
+    }
+
     /* footer section */
 
     .footer-content {
