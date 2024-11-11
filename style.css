@@ -192,20 +192,16 @@ p {
 }
 
 .ctaButton {
-    height: 15%;
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #fff;
+    margin-left: 50%;
     text-decoration: none;
-    border-radius: 5px;
-    margin-left: 20%;
     transition: background-color 0.3s;
     margin-right: 5px;
+    height: 100%;
 }
 
 .ctaButton:hover {
-    background-color: #c0263b;
+    /* background-color: #c0263b; */
 }
 
 .heroImg img {
@@ -945,6 +941,7 @@ p {
     }
 
     .profileBtn {
+        width: 100%;
         justify-content: center;
         gap: 10px;
     }
