@@ -1078,6 +1078,7 @@ p {
 
     /* Instagram Section code */
     .instageam-section {
+        width: 100%;
         padding: 1em 0;
         margin: 1em 0;
         border-radius: 20px;
@@ -1508,6 +1509,7 @@ p {
 
     /* Instagram Section code */
     .instageam-section {
+        width: 100%;
         padding: 1em 0;
         margin: 1em 0;
         border-radius: 20px;
