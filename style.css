@@ -1605,7 +1605,7 @@ p {
     }
 
     .subscription-container {
-        width: 100%;
+        width: 90%;
         margin-top: 25px;
         display: flex;
         justify-content: center;
