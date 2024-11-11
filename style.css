@@ -964,7 +964,7 @@ p {
     }
 
     .heroImg {
-        text-align-last:center;
+        text-align-last: center;
     }
 
 
@@ -1192,6 +1192,13 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .subscription-input {
+        padding: 0px 0px;
+        font-size: 15px;
+        border: none;
+        flex: 2;
     }
 
     /* footer section */
@@ -1614,6 +1621,24 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .subscription-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .subscription-button {
+        padding: 18px 15px;
+        border-radius: 0 10px 10px 0;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
     }
 
     /* footer section */
