@@ -925,17 +925,18 @@ p {
     }
 
     .recipe {
-        font-size: 16px;
+        font-size: 14px;
         justify-content: left;
     }
 
-    h1 {
-        font-size: 32px;
+    .heroContent h1 {
+        font-size: 25px;
         margin: 10px 0;
     }
 
-    p {
-        font-size: 16px;
+    .heroContent p {
+        text-align: left;
+        font-size: 13px;
         margin-bottom: 15px;
     }
 
