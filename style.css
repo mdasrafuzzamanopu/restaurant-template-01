@@ -819,7 +819,7 @@ p {
 
 /* mobile view */
 
-@media (max-width: 450px) {
+@media (max-width: 430px) {
     ::-webkit-scrollbar-thumb {
         background-color: black;
     }
@@ -830,9 +830,10 @@ p {
         scrollbar-color: black #f1f1f1;
     }
 
+
     .header {
         padding: 15px;
-        width: 400px;
+        width: 95%;
     }
 
     #navMenu {
@@ -1247,7 +1248,7 @@ p {
 
     .header {
         padding: 15px;
-        width: 400px;
+        width: 95%;
     }
 
     #navMenu {
