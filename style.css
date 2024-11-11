@@ -909,6 +909,7 @@ p {
     /* hero */
 
     .hero {
+        width: 100%;
         padding: 20px 10px;
         height: auto;
         border-radius: 20px;
@@ -1249,7 +1250,7 @@ p {
 
     .header {
         padding: 15px;
-        width: 95%;
+        width: 100%;
     }
 
     #navMenu {
@@ -1324,6 +1325,7 @@ p {
     /* hero */
 
     .hero {
+        width: 100%;
         padding: 20px 10px;
         height: auto;
         border-radius: 20px;
