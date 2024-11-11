@@ -126,8 +126,14 @@ body {
 }
 
 .heroContent {
-    max-width: 50%;
+    max-width: 100%;
+    height: inherit;
 }
+
+.heroContent h1{
+    font-size: 40px;
+}
+
 
 .recipe {
     display: flex;
@@ -1724,7 +1730,7 @@ p {
     }
 }
 
-@media (min-width:1450px){
+@media (min-width:1450px) {
     .ctaButton {
         position: relative;
         display: inline-block;
