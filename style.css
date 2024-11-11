@@ -122,7 +122,6 @@ body {
     align-items: center;
     height: 400px;
     margin-left: 75px;
-
 }
 
 .heroContent {
@@ -192,17 +191,15 @@ p {
 }
 
 .ctaButton {
+    position: relative;
     display: inline-block;
-    margin-left: 50%;
+    margin-left: 80%;
     text-decoration: none;
     transition: background-color 0.3s;
     margin-right: 5px;
     height: 100%;
 }
 
-.ctaButton:hover {
-    /* background-color: #c0263b; */
-}
 
 .heroImg img {
     width: 665px;
@@ -905,6 +902,7 @@ p {
         padding: 20px 10px;
         height: auto;
         border-radius: 20px;
+        margin-bottom:  115px;
     }
 
     .heroContainer {
@@ -949,11 +947,14 @@ p {
     .ctaButton {
         margin: 0 auto;
         display: block;
+        height: 70px;
+        margin-left: 50%;
     }
 
     .heroImg img {
         width: 100%;
         height: auto;
+        border-radius: 50px;
     }
 
 
