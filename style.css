@@ -1005,10 +1005,8 @@ p {
 
     .category-cards {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        /* grid-template-columns: repeat(1, 2fr); */
         gap: 0.5em;
         padding: 1em 0;
-        margin-left: 5%;
     }
 
     .category-cat-card {
@@ -1437,7 +1435,6 @@ p {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 0.5em;
         padding: 1em 0;
-        margin-left: 1%;
     }
 
     .category-cat-card {
