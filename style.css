@@ -964,10 +964,10 @@ p {
     }
 
     .ctaButton {
-        margin: 0 auto;
+        margin: 0;
+        margin-bottom: 5px;
         display: block;
         height: 70px;
-        margin-left: 40%;
     }
 
     .heroImg {
@@ -1395,10 +1395,10 @@ p {
     }
 
     .ctaButton {
-        margin: 0 auto;
+        margin: 0;
+        margin-bottom: 5px;
         display: block;
         height: 70px;
-        margin-left: 30%;
     }
 
     .heroImg {
