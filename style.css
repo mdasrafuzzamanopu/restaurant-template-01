@@ -1604,6 +1604,14 @@ p {
         display: none;
     }
 
+    .subscription-container {
+        width: 100%;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     /* footer section */
 
     .footer-content {
