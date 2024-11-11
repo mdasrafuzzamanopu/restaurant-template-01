@@ -833,8 +833,9 @@ p {
 
 
     .header {
+
         padding: 15px;
-        width: 95%;
+        width: 93%;
     }
 
     #navMenu {
@@ -909,7 +910,7 @@ p {
     /* hero */
 
     .hero {
-        width: 100%;
+        width: 95%;
         padding: 20px 10px;
         height: auto;
         border-radius: 20px;
