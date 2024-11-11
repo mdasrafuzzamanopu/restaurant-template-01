@@ -143,8 +143,8 @@ body {
 }
 
 .recipe img {
-    width: 24px;        
-    height: 24px;      
+    width: 24px;
+    height: 24px;
     margin-right: 8px;
 }
 
@@ -181,8 +181,8 @@ p {
 }
 
 .pImg img {
-    width: 100%;      
-    height: auto;        
+    width: 100%;
+    height: auto;
     margin-right: 10px;
 
 }
@@ -271,11 +271,11 @@ p {
 }
 
 .category-cat-card img {
-    width: 100%;              
-    height: auto;              
-    max-width: 100px;         
-    max-height: 100px;         
-    object-fit: contain;   
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
     opacity: 1;
 }
 
@@ -913,7 +913,7 @@ p {
         padding: 20px 10px;
         height: auto;
         border-radius: 20px;
-        margin-bottom:  115px;
+        margin-bottom: 115px;
     }
 
     .heroContainer {
@@ -963,8 +963,13 @@ p {
         margin-left: 40%;
     }
 
+    .heroImg {
+        text-align-last:center;
+    }
+
+
     .heroImg img {
-        width: 8%;
+        width: 80%;
         height: auto;
         border-radius: 50px;
     }
@@ -972,7 +977,7 @@ p {
 
     /* Categories */
     .category {
-        padding-top: 20em;
+        padding-top: 10em;
     }
 
     .category-title {
@@ -1324,7 +1329,7 @@ p {
         padding: 20px 10px;
         height: auto;
         border-radius: 20px;
-        margin-bottom:  115px;
+        margin-bottom: 115px;
     }
 
     .heroContainer {
@@ -1374,8 +1379,12 @@ p {
         margin-left: 30%;
     }
 
+    .heroImg {
+        text-align-last: center;
+    }
+
     .heroImg img {
-        width: 70%;
+        width: 80%;
         height: auto;
         border-radius: 50px;
     }
@@ -1383,7 +1392,7 @@ p {
 
     /* Categories */
     .category {
-        padding-top: 20em;
+        padding-top: 10em;
     }
 
     .category-title {
@@ -1666,9 +1675,10 @@ p {
 /* Optional: Retina display support with high-res images */
 @media only screen and (min-device-pixel-ratio: 2) {
     .pImg img {
-        content: url(images/person.png);  
+        content: url(images/person.png);
     }
+
     .recipe img {
-        content: url(images/hot-pecipes.png);  
+        content: url(images/hot-pecipes.png);
     }
 }
