@@ -991,18 +991,12 @@ p {
         padding: 0.6em 1em;
     }
 
-    /* .category-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1em;
-        padding: 2em 0;
-    } */
-
     .category-cards {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         /* grid-template-columns: repeat(1, 2fr); */
         gap: 0.5em;
         padding: 1em 0;
+        margin-left: 5%;
     }
 
     .category-cat-card {
@@ -1408,18 +1402,11 @@ p {
         padding: 0.6em 1em;
     }
 
-    /* .category-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1em;
-        padding: 2em 0;
-    } */
-
     .category-cards {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        /* grid-template-columns: repeat(1, 2fr); */
         gap: 0.5em;
         padding: 1em 0;
+        margin-left: 5%;
     }
 
     .category-cat-card {
