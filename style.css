@@ -30,6 +30,7 @@ body {
     scrollbar-color: red #f1f1f1;
 }
 
+
 .logo-image {
     height: auto;
     max-width: 100%;
@@ -958,7 +959,7 @@ p {
         margin: 0 auto;
         display: block;
         height: 70px;
-        margin-left: 50%;
+        margin-left: 40%;
     }
 
     .heroImg img {
