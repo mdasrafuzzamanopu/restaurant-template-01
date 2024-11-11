@@ -186,10 +186,6 @@ p {
     align-items: center;
 }
 
-.pImg {
-    margin-right: 20px;
-}
-
 .pImg img {
     width: 100%;
     height: auto;
@@ -964,6 +960,10 @@ p {
         justify-content: left;
         margin-left: 20px;
         gap: 10px;
+    }
+
+    .pImg {
+        margin-right: 20px;
     }
 
     .ctaButton {
