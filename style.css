@@ -1723,3 +1723,13 @@ p {
         content: url(images/hot-pecipes.png);
     }
 }
+
+@media (min-width:1450px){
+    .ctaButton {
+        position: relative;
+        display: inline-block;
+        margin-left: 50%;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+}
